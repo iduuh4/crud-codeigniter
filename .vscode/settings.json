@@ -1,0 +1,48 @@
+{
+	"workbench.iconTheme": "material-icon-theme",
+	"files.autoSave": "onFocusChange",
+	"[javascriptreact]": {
+	  "editor.defaultFormatter": "esbenp.prettier-vscode"
+	},
+	"editor.formatOnSave": true,
+	"editor.fontFamily": "'Fira Code'",
+	"editor.fontLigatures": true,
+  
+	"intelephense.format.enable": true,
+	"intelephense.completion.insertUseDeclaration": true,
+	"intelephense.completion.triggerParameterHints": true,
+	"intelephense.completion.fullyQualifyGlobalConstantsAndFunctions": true,
+	"intelephense.trace.server": "messages",
+	"RainbowBrackets.depreciation-notice": false,
+	"workbench.colorTheme": "Default Dark+",
+	"[css]": {
+	  "editor.defaultFormatter": "esbenp.prettier-vscode"
+	},
+	"explorer.compactFolders": false,
+	"workbench.settings.applyToAllProfiles": [
+  
+	],
+	
+	"files.exclude": {
+	  "**/.git": true,
+	  "**/.svn": true,
+	  "**/.hg": true,
+	  "**/.DS_Store": true,
+	  "**/Thumbs.db": true,
+	  "**/index.html": true,
+	  "**/.htaccess": true,
+  
+	  "system": true,
+	  "application/cache": true,
+	  "application/core": true,
+	  "application/helpers": true,
+	  "application/hooks": true,
+	  "application/language": true,
+	  "application/libraries": true,
+	  "MATERIAL": true,
+	  "application/logs": true,
+	  "application/third_party": true,
+
+	}
+  }
+  
