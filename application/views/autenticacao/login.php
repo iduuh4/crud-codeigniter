@@ -12,27 +12,34 @@
 <body class="d-flex min-vh-100">
 	<div class="container d-flex flex-column justify-content-center align-items-center">
 		<div class="d-flex align-self-center">
+
+			<?php if($this->session->flashdata("error")) : ?>
+				<p><?= $this->session->flashdata("error")  ?></p>
+				<?php endif ?>
+
 			<div class="text-center card p-4">
 				<h2>Área de Login </h2>
 					<hr>
-				<form class="form" action="<?= base_url('index.php/autenticacao/autenticar') ?>" method="post">
+				<form class="form" action="<?= site_url('autenticar/login') ?>" method="post">
+				 <!-- Token CSRF Necessário -->
+				<input type="hidden" name="<?php echo $this->security->get_csrf_token_name(); ?>" value="<?php echo $this->security->get_csrf_hash(); ?>">
 					<div class="mb-3">
 						<label for="usuario" class="form-label">Usuário</label>
 						<div class="input-wrapper">
 							<i class="fas fa-sign-in"></i>
-							<input type="text" class="form-control" id="usuario" placeholder="Digite seu usuário" required>
+							<input type="text" class="form-control" id="usuario" name="usuario" placeholder="Digite seu usuário" required>
 						</div>
-					</div>
-					<div class="mb-3">
-						<label for="senha" class="form-label">Senha</label>
-						<div class="input-wrapper">
-							<i class="fas fa-key"></i>
-						<input type="password" class="form-control" id="senha" placeholder="Digite sua senha" required>
+						</div>
+						<div class="mb-3">
+							<label for="senha" class="form-label">Senha</label>
+							<div class="input-wrapper">
+								<i class="fas fa-key"></i>
+							<input type="password" class="form-control" id="senha" name="senha" placeholder="Digite sua senha" required>
 						</div>
 					</div>
 					<button type="submit" class="btn btn-success">Entrar</button>
 					<hr>
-					<p>Ainda não tem cadastro? <a href="<?= base_url('index.php/autenticacao/cadastro/') ?>">Criar conta</a></p>
+					<p>Ainda não tem cadastro? <a href="<?= site_url('autenticar/cadastro') ?>">Criar conta</a></p>
 				</form>
 			</div>
 		</div>

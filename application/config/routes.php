@@ -49,8 +49,11 @@ defined('BASEPATH') or exit('No direct script access allowed');
 | Examples:	my-controller/index	-> my_controller/index
 |		my-controller/my-method	-> my_controller/my_method
 */
-$route['default_controller'] = 'login';
-$route['autenticacao/login'] = 'login';
-$route['autenticacao/cadastro'] = 'login/cadastro';
+$route['default_controller'] = 'autenticar/login';
+$route['login'] = 'autenticar/login';
+$route['cadastro'] = 'autenticar/cadastro';
+$route['sair'] = 'autenticar/sair';
+$route['estado'] = 'estado';
+$route['estado/(:any)'] = 'estado/$1';  // Captura todas as outras rotas do Estado
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;

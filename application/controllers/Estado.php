@@ -3,13 +3,17 @@ defined('BASEPATH') or exit('No direct script access allowed');
 
 class Estado extends CI_Controller
 {
-	public function index() // caso exista uma funcao index(), ela será escutada automaticamente
+	public function __construct() {
+        parent::__construct();
+        if(!$this->session->userdata('logado')){ //caso não esteja logado, redireciona para a página de login
+            redirect('autenticar/login');
+        }
+        $this->load->model('EstadoModel');
+    }
 
+	public function index()
 	{
-		// Carrega o model, que contem o acesso ao db
-		$this->load->model('EstadoModel');
-
-		// Chama a função que seleciona todos os estados no model
+		// Chama o metodo que seleciona todos os estados no model
 		$tabela = $this->EstadoModel->SelecionarTodos();
 
 		$dados = array(

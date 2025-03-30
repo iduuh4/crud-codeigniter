@@ -14,7 +14,7 @@
 			<div class="text-center card p-4">
 					<h1> Bem vindo ...</h1> 
 					<br>
-					<a href="<?= base_url('index.php/estado/cadastrar') ?>" class="btn btn-primary">Cadastar</a><br>
+					<a href="<?= site_url('estado/cadastrar') ?>" class="btn btn-primary">Cadastar</a><br>
 					<hr>
 					<table class="table">
 					<div class="text-center">
@@ -34,14 +34,14 @@
 								<td><?= $linha->cidade ?></td>
 								<td><?= $linha->sigla ?></td>
 								<td>
-									<a href="<?= base_url('index.php/estado/editar/'.$linha->id) ?>" class="btn btn-primary">Editar</a>
-									<a href="<?= base_url('index.php/estado/excluir/'.$linha->id) ?>" class="btn btn-danger" onclick="return confirm('Tem certeza que deseja excluir este registro?')">Excluir</a>
+									<a href="<?= site_url('estado/editar/'.$linha->id) ?>" class="btn btn-primary">Editar</a>
+									<a href="<?= site_url('estado/excluir/'.$linha->id) ?>" class="btn btn-danger" onclick="return confirm('Tem certeza que deseja excluir este registro?')">Excluir</a>
 								</td>
 							</tr>
 						<?php endforeach; ?>
 					</tbody>
 				</table>
-				<a href="<?= base_url('index.php/autenticacao/login/') ?>" class="btn btn-danger">Sair da conta</a>			</div>
+				<a href="<?= site_url('autenticar/sair') ?>" class="btn btn-danger">Sair da conta</a>			</div>
 			</div>
 		</div>
 	</div>
