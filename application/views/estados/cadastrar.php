@@ -4,13 +4,9 @@
 		<link rel="stylesheet" href="<?php echo base_url('assets/css/bootstrap.min.css'); ?>">
 
 		<?php echo form_open('index.php/estado/salvar'); ?>
-		<div class="mb-3">
-			<label for="cidade" class="form-label">Cidade</label>
-			<input type="text" name="cidade" class="form-control" id="cidade" placeholder="Digite o nome da cidade" required>
-		</div>
 
 		<div class="mb-3">
-			<label for="sigla" class="form-label">Sigla</label>
+			<label for="sigla" class="form-label">Estado</label>
 			<select id="sigla" name="sigla" class="form-select" required>
 				<option value="">Selecione</option>
 				<option value="AC">Acre</option>
@@ -41,6 +37,10 @@
 				<option value="SE">Sergipe</option>
 				<option value="TO">Tocantins</option>
 			</select>
+		</div>
+		<div class="mb-3">
+			<label for="cidade" class="form-label">Cidade</label>
+			<input type="text" name="cidade" class="form-control" id="cidade" placeholder="Digite o nome da cidade" required>
 		</div>
 
 		<button type="submit" class="btn btn-primary">Cadastrar</button>

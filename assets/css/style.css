@@ -1,3 +1,29 @@
 body {
-	background-color: #c1c1c1;
+	background: rgb(2, 0, 36);
+	background: linear-gradient(
+		83deg,
+		rgba(2, 0, 36, 1) 0%,
+		rgba(33, 56, 63, 1) 0%,
+		rgba(0, 95, 115, 1) 100%,
+		rgba(17, 134, 159, 1) 100%
+	);
+}
+
+.input-wrapper {
+	position: relative;
+	width: 100%;
+}
+
+.input-wrapper i {
+	position: absolute;
+	left: 10px;
+	top: 50%;
+	transform: translateY(-50%);
+	color: #555;
+	z-index: 2;
+}
+
+.input-wrapper .form-control {
+	padding-left: 35px;
+	width: 100%;
 }
