@@ -33,7 +33,7 @@ class Autenticar extends CI_Controller {
 				redirect('estado'); // Redireciona para a página inicial dos estados após o login
 			}else{
 				$this->session->set_flashdata('error', 'Usuário ou senha inválidos!'); // Armazena a mensagem de erro na sessão
-				redirect('autenticacao/login'); // Redireciona para a página de login
+				redirect('autenticar/login'); // Redireciona para a página de login
 			}
 		}
 	}

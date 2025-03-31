@@ -12,12 +12,15 @@
 <body class="d-flex min-vh-100">
 	<div class="container d-flex flex-column justify-content-center align-items-center">
 		<div class="d-flex align-self-center">
+			<div class="text-center card p-4">
 
 			<?php if($this->session->flashdata("error")) : ?>
-				<p><?= $this->session->flashdata("error")  ?></p>
-				<?php endif ?>
+				<div class="alert alert-danger alert-dismissible fade show" role="alert">
+					<?= $this->session->flashdata("error") ?>
+					<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+				</div>
+			<?php endif ?>
 
-			<div class="text-center card p-4">
 				<h2>Área de Login </h2>
 					<hr>
 				<form class="form" action="<?= site_url('autenticar/login') ?>" method="post">
@@ -46,5 +49,12 @@
 	</div>
 
 <script src="<?php echo base_url('assets/js/bootstrap.bundle.min.js'); ?>"></script>
+<script>
+	document.querySelectorAll('.btn-close').forEach(btn => {
+		btn.addEventListener('click', function() {
+			this.closest('.alert, .minimal-error').style.display = 'none';
+		});
+	});
+</script>
 </body>
 </html>
